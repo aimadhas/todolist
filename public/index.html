@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-size: cover;
+    }
+</style>
+
+<body class="w-full h-screen font-roboto font-semibold dark:bg-black">
+    <section id="one"
+        class="bg-[url('/images/bg-desktop-light.jpg')] bg-cover bg-no-repeat w-full h-[45%] flex flex-col pt-8 items-center gap-9 z-0 dark:bg-[url('/images/bg-desktop-dark.jpg')] dark:bg-cover max-[550px]:bg-[url('/images/bg-mobile-light.jpg')]">
+        <div class="flex justify-between items-center w-[500px] max-[550px]:w-3/4">
+            <h1 class="text-[40px] text-white font-semibold tracking-wideset">TODO</h1>
+            <img id="dark" class="h-7 block dark:hidden" src="/images/icon-moon.svg" alt="">
+            <img id="light" class="h-7 hidden dark:block" src="/images/icon-sun.svg" alt="">
+        </div>
+        <input id="input" class="pl-4 w-[500px] outline-none rounded-md h-12 max-[550px]:w-3/4" type="text"
+            placeholder="TYPE YOUR TASK">
+    </section>
+    <section class="w-[500px]  bg-white shadow-lg rounded-md mx-auto relative top-[-60px] divide-y-2 max-[550px]:w-3/4">
+        <div id="contenaire" class="w-full h-56 overflow-y-scroll">
+        </div>
+        <div
+            class="w-full p-4 flex justify-between max-[450px]:flex-col max-[450px]:justify-center max-[550px]:gap-5 max-[550px]:items-center">
+            <div class="btn-filter flex gap-6">
+                <a class="btnlist all text-sky-700 text-[15px]" href="#">All</a>
+                <a class="btnlist active text-[15px]" href="#" class="">Active</a>
+                <a class="btnlist completed text-[15px]" href="#">Completed</a>
+            </div>
+            <div class=" text-[15px]">
+                <a class="clear hover:text-red-800" href="#">Clear completed</a>
+            </div>
+        </div>
+    </section>
+    <!-- <script src="/javascript/script.js"></script> -->
+    <script src="/javascript/test.js"></script>
+</body>
+
+</html>
